@@ -1,0 +1,4 @@
+1、使用webfilter创建登录过滤器使用方法
+ ①在springboot入口程序添加注解@ServletComponentScan，这样才能扫描到创建的过滤器
+ ②创建登录过滤器实现filter(javax.servlet.annotation.WebFilter)，重写dofilter方法即可
+  对静态资源和登录登出请求放行，其他请求拦截一下，判断session里面是否有jsessionid，没有的话就拦截住，跳转到登录界面
